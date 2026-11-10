@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6 - The Party</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <div>
+            <p class="eyebrow">jQuery · Selectors · Effects · Animations</p>
+            <h1>The Party, 19:30 – 22:30</h1>
+            <p class="subtitle">A birthday party at AITU. Find the missing cake!</p>
+        </div>
+        <div class="header-actions">
+            <button id="clearBtn" class="button secondary">Clear spotlight</button>
+            <button id="resetBtn" class="button secondary">Reset party</button>
+        </div>
+    </header>
+    <main>
+        <section class="legend">
+            <span class="legend-title">Clothing</span>
+            <span><i class="dot red"></i> Red</span>
+            <span><i class="dot yellow"></i> Yellow</span>
+            <span><i class="dot green"></i> Green</span>
+            <span><i class="dot blue"></i> Blue</span>
+            <span><i class="dot purple"></i> Purple</span>
+            <span><i class="dot black"></i> Black</span>
+            <span class="legend-divider"></span>
+            <span>☎ Phone</span><span>◎ Glasses</span><span>▣ Bag</span><span>☕ Cup</span><span>✦ Crumbs</span><span>◉ AITU student</span>
+        </section>
+        <section class="house-wrap">
+            <div class="roof"><span>THE BIRTHDAY HOUSE</span></div>
+            <div class="floor-label">FLOOR 2</div>
+            <div class="floor" id="floor2">
+                <section class="room" data-room="Balcony">
+                    <div class="room-heading"><h2>Balcony</h2><button class="button tiny sortBtn">Sort by time</button></div>
+                    <div class="guest-list" id="room-Balcony"></div>
+                </section>
+                <section class="room" data-room="Hall">
+                    <div class="room-heading"><h2>Hall</h2><button class="button tiny sortBtn">Sort by time</button></div>
+                    <div class="guest-list" id="room-Hall"></div>
+                </section>
+            </div>
+            <div class="floor-label">FLOOR 1</div>
+            <div class="floor" id="floor1">
+                <section class="room" data-room="Kitchen">
+                    <div class="room-heading"><h2>Kitchen</h2><button class="button tiny sortBtn">Sort by time</button></div>
+                    <div class="guest-list" id="room-Kitchen"></div>
+                </section>
+                <section class="room" data-room="Living room">
+                    <div class="room-heading"><h2>Living room</h2><button class="button tiny sortBtn">Sort by time</button></div>
+                    <div class="guest-list" id="room-Living room"></div>
+                </section>
+            </div>
+            <div class="foundation">THE PARTY HOUSE <span>21 GUESTS · 4 ROOMS · 2 FLOORS</span></div>
+        </section>
+        <section class="cases-section">
+            <div class="section-heading">
+                <div><p class="eyebrow">TASK 1</p><h2>Selector Detective</h2></div>
+                <p>Choose a case to search the party using jQuery selectors.</p>
+            </div>
+            <div id="caseButtons" class="case-grid"></div>
+            <div id="caseResult" class="result-panel"><strong>Ready to investigate.</strong><span>Select any case above.</span></div>
+        </section>
+    </main>
+    <div id="guestModal" class="modal-backdrop" aria-hidden="true">
+        <div class="guest-modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+            <button id="closeModal" class="modal-close">×</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <footer>Assignment #6 · jQuery Selectors, Effects and Animations</footer>
+</body>
+</html>
